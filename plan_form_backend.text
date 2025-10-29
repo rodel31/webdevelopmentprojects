@@ -1,0 +1,25 @@
+WEBSITE BACKEND DESIGN PLAN FORM
+Candidate Name: _______________________
+Date: _______________________
+Project Title: MKNR Bus Location JSON Search API (PHP + MySQL)
+Objective: Build a secure API to allow bus companies to query real-time bus telemetry.
+Target Users: MKNR Corporation and partner bus companies.
+Tools/Tech: PHP 8, MySQL 8, Apache (XAMPP), Postman, CSV import.
+Database Schema:
+
+companies(id, name, api_key)
+
+buses(id, vehicle_id, plate_num, company_id)
+
+readings(id, vehicle_id, lat, lon, speed, dt, course)
+Security Measures:
+
+Minimum 8-character API key
+
+Company data isolation via company_id relation
+API Specification:
+Endpoint: /mknr_api/api.php
+Params: platenum, time=HH:MM, apikey
+Output: JSON with vehicle_id, coordinates, speed, course, dt
+Expected Output: JSON result filtered to 1-hour window.
+Prepared by: _______________________
