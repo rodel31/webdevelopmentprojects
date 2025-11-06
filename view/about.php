@@ -4,27 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>About Us — MKNR Corporation</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <header class="site-header">
-            <div class="container header-inner">
-                <a href="index.html" class="brand">
-                    <img src="assets/logo.jpg" alt="MKNR Corporation Logo" class="logo">
-                    <span class="brand-name">MKNR Corporation</span>
-                </a>
-                <button class="nav-toggle" aria-label="toggle navigation">☰</button>
-                <nav class="site-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html" class="active">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="plan_form.html">Plan Form</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
+        <?php include('../partials/header.php') ?>
 
         <main class="container">
             <section class="about-hero">

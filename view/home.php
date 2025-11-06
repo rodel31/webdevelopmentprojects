@@ -4,27 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MKNR Corporation — IT Consultancy</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
-    <body onload="welcomeMessage()">
-        <header class="site-header">
-            <div class="container header-inner">
-                <a href="index.html" class="brand">
-                    <img src="assets/logo.jpg" alt="MKNR Corporation Logo" class="logo">
-                    <span class="brand-name">MKNR Corporation</span>
-                </a>
-                <button class="nav-toggle" aria-label="toggle navigation">☰</button>
-                <nav class="site-nav">
-                    <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="plan_form.html">Plan Form</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
+    <!-- <body onload="welcomeMessage()"> -->
+    <body>
+        <?php include('../partials/header.php') ?>
 
         <main>
             <section class="hero">
@@ -32,13 +16,13 @@
                     <div class="hero-copy">
                         <h1>Strategy. Design. Online Growth.</h1>
                         <p>We help businesses transform digitally through strategy, creative design, and online marketing.</p>
-                        <a href="contact.html" class="btn">Get in touch</a>
+                        <a href="contact.php" class="btn">Get in touch</a>
                     </div>
                     <div class="slideshow">
-                        <img src="assets/hero.jpg" alt="IT consultancy illustration"class="slide active">
-                        <img src="assets/service1.jpg" class="slide">
-                        <img src="assets/service2.jpg" class="slide">
-                        <img src="assets/service3.jpg" class="slide">
+                        <img src="../assets/hero.jpg" alt="IT consultancy illustration"class="slide active">
+                        <img src="../assets/service1.jpg" class="slide">
+                        <img src="../assets/service2.jpg" class="slide">
+                        <img src="../assets/service3.jpg" class="slide">
                     </div>
                 </div>
             </section>
@@ -54,40 +38,40 @@
                 <h3>Our Services</h3>
                 <div class="service-grid">
                     <article class="service">
-                        <img src="assets/service1.jpg" alt="Strategy and Consulting"class="product-img" data-hover="assets/red1.png">
+                        <img src="../assets/service1.jpg" alt="Strategy and Consulting"class="product-img" data-hover="assets/red1.png">
                         <h4>Strategy &amp; Consulting</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Short description of the service.</p>
                         <button class="buy-btn">BUY</button>
                     </article>
                     <article class="service">
-                        <img src="assets/service2.jpg" alt="Creative Design"class="product-img" data-hover="assets/red2.png">
+                        <img src="../assets/service2.jpg" alt="Creative Design"class="product-img" data-hover="assets/red2.png">
                         <h4>Creative Design</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Short description of the service.</p>
                         <button class="buy-btn">BUY</button>
                     </article>
                         <article class="service">
-                        <img src="assets/service3.jpg" alt="Online Marketing"class="product-img" data-hover="assets/red3.png">
+                        <img src="../assets/service3.jpg" alt="Online Marketing"class="product-img" data-hover="assets/red3.png">
                         <h4>Online Marketing</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Short description of the service.</p>
                         <button class="buy-btn">BUY</button>
                     </article>
                     </article>
                         <article class="service">
-                        <img src="assets/service4.jpg" alt="Web Development"class="product-img" data-hover="assets/red4.png">
+                        <img src="../assets/service4.jpg" alt="Web Development"class="product-img" data-hover="assets/red4.png">
                         <h4>Web Development</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Short description of the service.</p>
                         <button class="buy-btn">BUY</button>
                     </article>
                     </article>
                         <article class="service">
-                        <img src="assets/service5.jpg" alt="Web Design"class="product-img" data-hover="assets/red5.png">
+                        <img src="../assets/service5.jpg" alt="Web Design"class="product-img" data-hover="assets/red5.png">
                         <h4>Web Design</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Short description of the service.</p>
                         <button class="buy-btn">BUY</button>
                     </article>
                     </article>
                         <article class="service">
-                        <img src="assets/service6.jpg" alt="Graphics Design"class="product-img" data-hover="assets/red6.png">
+                        <img src="../assets/service6.jpg" alt="Graphics Design"class="product-img" data-hover="assets/red6.png">
                         <h4>Graphics Design</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Short description of the service.</p>
                         <button class="buy-btn">BUY</button>
@@ -98,7 +82,7 @@
 
             <section class="contact-cta">
                 <div class="container">
-                    <p>Ready to start your project? <a href="contact.html">Contact us</a> or fill up the <a href="plan_form.html">Design Plan Form</a>.</p>
+                    <p>Ready to start your project? <a href="contact.php">Contact us</a> or fill up the <a href="plan_form.php">Design Plan Form</a>.</p>
                 </div>
             </section>
         </main>
@@ -115,12 +99,11 @@
         </footer>
 
         <script>
-            // Small script for nav toggle and year
             document.getElementById('year').textContent = new Date().getFullYear();
             const toggle = document.querySelector('.nav-toggle');
             const nav = document.querySelector('.site-nav');
-            toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+            toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
         </script>
-        <script src="js/scripts.js"></script>
+        <script src="../js/scripts.js"></script>
     </body>
 </html>
